@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+//给定一个具有n个整数的数组，这个数组中，只有一个整数出现了奇数次，而其他数均出现了偶数次，你的任务是找出这个出现了奇数次的整数。
+#include <stdio.h>
+ 
+int findOddOccurrence(int arr[], int n) {
+    int result = 0;
+    for (int i = 0; i < n; i++) {
+        result ^= arr[i];
+    }
+    return result;
+}
+ 
+int main() {
+    int n;
+   // printf("请输入整数的个数：");
+    scanf("%d", &n);
+     
+    int arr[n];
+    //printf("请输入%d个整数：", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+     
+    int oddOccurrence = findOddOccurrence(arr, n);
+    printf("%d\n", oddOccurrence);
+     
+    return 0;
+}
