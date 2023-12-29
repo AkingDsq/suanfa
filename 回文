@@ -1,0 +1,17 @@
+#include <bits\stdc++.h>
+using namespace std;
+
+int main(){
+	string s;
+	cin >> s;
+	int n = s.size();
+	for(int i = 0, j = n - 1; i < n; i++, j--){
+		if(s[i] != s[j]){
+			printf("不是回文");
+			return 0;
+			break;
+		}
+	}	
+	printf("是回文");
+	return 0;
+}
